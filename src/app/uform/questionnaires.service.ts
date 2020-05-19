@@ -6,7 +6,7 @@ import { Questionnaire } from './state/questionnaire.model';
 import { tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
-export class ProductsService {
+export class QuestionnairesService {
 
   constructor(private productsStore: QuestionnairesStore,
               private http: HttpClient) {}
