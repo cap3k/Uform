@@ -1,22 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-import { QuestionnaireComponent } from './uform/questionnaire/questionnaire.component';
-import { PreambuleComponent } from './uform/questionnaire/1-preambule/preambule/preambule.component';
-import { InfosComplementairesComponent } from './uform/questionnaire/1-preambule/infos-complementaires/infos-complementaires.component';
+import { CoreModule } from './core/core.module';
+import { HomeModule } from './uform/home/home.module';
+import { SharedModule } from './shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionnaireComponent,
-    PreambuleComponent,
-    InfosComplementairesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(AppRoutes),
+    CoreModule,
+    SharedModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
